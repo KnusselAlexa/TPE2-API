@@ -5,7 +5,7 @@ class ApiView{
     public function response($data, $code){
         //ponerse de acuerdo en que lenguaje van a hablar(indica al cliente si no le indico nada tipo texto)
         
-        header("Content-Type: applcation/jason");
+        header("Content-Type: application/json");
         header("HTTP/1.1 " . $code . " " . $this->_requestStatus($code));
         echo json_encode($data);
     }
